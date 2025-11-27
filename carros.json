@@ -1,17 +1,7 @@
 [
     {
-        "marca": "bmw",
-        "modelo": "m4",
-        "ano": "20225"
-    },
-    {
-        "marca": "renault",
-        "modelo": "kwid",
-        "ano": "2023"
-    },
-    {
-        "marca": "porsche ",
-        "modelo": "gt3 rs",
+        "marca": "BMW",
+        "modelo": "320i",
         "ano": "2024"
     }
 ]
