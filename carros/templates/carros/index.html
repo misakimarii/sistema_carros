@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadastro e Lista de Carros</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cadastro de Carros</h1>
+    </header>
+
+    <section class="form-section">
+      <h2>Novo Carro</h2>
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn" type="submit">Cadastrar</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>Carros Cadastrados</h2>
+      {% if carros %}
+        <table class="table">
+          <thead>
+            <tr><th>Marca</th><th>Modelo</th><th>Ano</th></tr>
+          </thead>
+          <tbody>
+            {% for carro in carros %}
+            <tr>
+              <td>{{ carro.marca }}</td>
+              <td>{{ carro.modelo }}</td>
+              <td>{{ carro.ano }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p>Nenhum carro cadastrado ainda.</p>
+      {% endif %}
+    </section>
+
+  </div>
+</body>
+</html>
+

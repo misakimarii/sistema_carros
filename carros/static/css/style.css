@@ -1,0 +1,60 @@
+/* style.css - simples e limpo */
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7fb;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+  color: #1e88e5;
+}
+
+.form-section, .list-section {
+  margin-top: 18px;
+}
+
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-top: 6px;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th, .table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.table th {
+  background: #f3f6fb;
+}
+

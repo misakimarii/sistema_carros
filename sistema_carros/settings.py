@@ -20,9 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # Suas apps
-    'carros',
+    'carros',  # seu app
 ]
 
 MIDDLEWARE = [
@@ -40,8 +38,8 @@ ROOT_URLCONF = 'sistema_carros.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / "templates"],  # pasta global de templates, se quiser
+        'APP_DIRS': True,  # busca templates dentro de cada app
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -84,6 +82,10 @@ TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = 'static/'
+# Arquivos estáticos
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "carros" / "static",  # busca css/js dentro do app carros
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
